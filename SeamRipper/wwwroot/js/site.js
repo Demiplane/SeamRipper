@@ -1,1 +1,1 @@
-﻿// Write your JavaScript code.
+﻿// If you are in this file, I hate you. Javascript has no place anywhere in this world and you are contributing to the problem.

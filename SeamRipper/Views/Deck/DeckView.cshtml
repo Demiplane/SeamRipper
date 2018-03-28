@@ -1,0 +1,23 @@
+﻿@Model CardViewModel
+
+@{
+    ViewData["Title"] = "Deck of Many Things";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contents of the Deck</h2>
+
+<ul>
+    @foreach (var cardName in Model.CardNames)
+    {
+        <li>@cardName</li>
+    }
+</ul>
+
+<div class="container">
+    <button type="button" class="btn btn-primary btn-lg" >Draw</button>
+    <button type="button" class="close" aria-label="Close" >
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
