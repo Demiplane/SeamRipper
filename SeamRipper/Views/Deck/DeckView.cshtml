@@ -1,22 +1,25 @@
-﻿@Model CardViewModel
+﻿@model DeckViewModel
 
 @{
     ViewData["Title"] = "Deck of Many Things";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Contents of the Deck</h2>
+<h1 class="text-primary">Contents of the Deck</h1>
 
-<ul>
-    @foreach (var cardName in Model.CardNames)
-    {
-        <li>@cardName</li>
-    }
-</ul>
+@foreach (var card in Model.Cards)
+{
+    <div>
+        <strong class="text-secondary">@card.Name</strong>
+        <p class="text-info">@card.Effect</p>
+        <img class="img-fluid" height="100" width="100" src="@Url.Content(@card.ImageLocation)" alt="@card.Name" />
+    </div>
+    <hr/>
+}
 
 <div class="container">
-    <button type="button" class="btn btn-primary btn-lg" >Draw</button>
-    <button type="button" class="close" aria-label="Close" >
+    <button type="button" class="btn btn-primary btn-lg">Draw</button>
+    <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 </div>

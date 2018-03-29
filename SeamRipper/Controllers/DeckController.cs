@@ -12,9 +12,7 @@ namespace SeamRipper.Controllers
     {
         public IActionResult List()
         {
-            var deckViewModel = new DeckViewModel();
-
-            deckViewModel.CardNames = new List<String>() { "Knight", "Sun", "Moon", "Void", };
+            var deckViewModel = new DeckViewModel(Deck.CreateFullDeck());
 
             return View("DeckView", deckViewModel);
         }
