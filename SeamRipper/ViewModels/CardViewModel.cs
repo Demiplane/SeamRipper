@@ -11,7 +11,7 @@ namespace SeamRipper.Models
         {
             this.Name = card.Name;
             this.Effect = card.Effect;
-            this.ImageLocation = "~/images/sun.svg";
+            this.ImageLocation = card.ImageLocation;
         }
 
         public string Name
